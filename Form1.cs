@@ -24,6 +24,14 @@ public partial class Form1 : Form
 		_pessoaRepository = pessoaRepository;
 		InitializeComponent();
 	}
+	private void Form1_Load(object sender, EventArgs e)
+	{
+		chkBoxEFCore.Checked = false;
+
+		EnableEfCore();
+
+		LimparForm();
+	}
 
 	private async void btnCadastrar_Click(object sender, EventArgs e)
 	{
@@ -270,6 +278,26 @@ public partial class Form1 : Form
 
 	}
 
+	// Habilitar botões EF
+	public void EnableEfCore()
+	{
+		if (chkBoxEFCore.Checked == true)
+		{
+			btnDeletar.Visible = true;
+			btnPesquisarPessoaEF.Visible = true;
+			btnEditarEf.Visible = true;
+			btnListarEfCore.Visible = true;
+		}
+
+		else if (chkBoxEFCore.Checked == false)
+		{
+			btnDeletar.Visible = false;
+			btnPesquisarPessoaEF.Visible = false;
+			btnEditarEf.Visible = false;
+			btnListarEfCore.Visible = false;
+		}
+	}
+
 	private void btnEditarEf_Click(object sender, EventArgs e)
 	{
 		// TODO
@@ -288,5 +316,10 @@ public partial class Form1 : Form
 
 		btnEditar.Enabled = false;
 		// btnEditarEf.Enabled = false;
+	}
+
+	private void chkBoxEFCore_CheckedChanged(object sender, EventArgs e)
+	{
+		EnableEfCore();
 	}
 }

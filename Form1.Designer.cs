@@ -43,6 +43,7 @@
 			btnDeletarDapper = new Button();
 			btnEditarEf = new Button();
 			btnEditar = new Button();
+			chkBoxEFCore = new CheckBox();
 			SuspendLayout();
 			// 
 			// lstBoxPessoas
@@ -64,7 +65,7 @@
 			btnListarDapper.FlatStyle = FlatStyle.Flat;
 			btnListarDapper.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
 			btnListarDapper.ForeColor = SystemColors.ButtonFace;
-			btnListarDapper.Location = new Point(382, 460);
+			btnListarDapper.Location = new Point(509, 460);
 			btnListarDapper.Name = "btnListarDapper";
 			btnListarDapper.Size = new Size(119, 35);
 			btnListarDapper.TabIndex = 1;
@@ -80,7 +81,7 @@
 			btnListarEfCore.FlatStyle = FlatStyle.Flat;
 			btnListarEfCore.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
 			btnListarEfCore.ForeColor = SystemColors.ButtonFace;
-			btnListarEfCore.Location = new Point(507, 460);
+			btnListarEfCore.Location = new Point(382, 460);
 			btnListarEfCore.Name = "btnListarEfCore";
 			btnListarEfCore.Size = new Size(121, 35);
 			btnListarEfCore.TabIndex = 2;
@@ -168,7 +169,6 @@
 			// 
 			btnPesquisarPessoaEF.BackColor = Color.FromArgb(30, 94, 255);
 			btnPesquisarPessoaEF.Cursor = Cursors.Hand;
-			btnPesquisarPessoaEF.Enabled = false;
 			btnPesquisarPessoaEF.FlatStyle = FlatStyle.Flat;
 			btnPesquisarPessoaEF.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
 			btnPesquisarPessoaEF.ForeColor = SystemColors.ButtonFace;
@@ -186,7 +186,6 @@
 			// 
 			btnDeletar.BackColor = Color.FromArgb(30, 94, 255);
 			btnDeletar.Cursor = Cursors.Hand;
-			btnDeletar.Enabled = false;
 			btnDeletar.FlatStyle = FlatStyle.Flat;
 			btnDeletar.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
 			btnDeletar.ForeColor = SystemColors.ButtonFace;
@@ -220,7 +219,6 @@
 			// 
 			btnEditarEf.BackColor = Color.FromArgb(30, 94, 255);
 			btnEditarEf.Cursor = Cursors.Hand;
-			btnEditarEf.Enabled = false;
 			btnEditarEf.FlatStyle = FlatStyle.Flat;
 			btnEditarEf.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
 			btnEditarEf.ForeColor = SystemColors.ButtonFace;
@@ -250,12 +248,26 @@
 			btnEditar.UseVisualStyleBackColor = false;
 			btnEditar.Click += btnEditar_Click;
 			// 
+			// chkBoxEFCore
+			// 
+			chkBoxEFCore.AutoSize = true;
+			chkBoxEFCore.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+			chkBoxEFCore.ForeColor = SystemColors.ControlLightLight;
+			chkBoxEFCore.Location = new Point(438, 12);
+			chkBoxEFCore.Name = "chkBoxEFCore";
+			chkBoxEFCore.Size = new Size(190, 54);
+			chkBoxEFCore.TabIndex = 14;
+			chkBoxEFCore.Text = "Habilitar Operações\r\ncom EF Core ";
+			chkBoxEFCore.UseVisualStyleBackColor = true;
+			chkBoxEFCore.CheckedChanged += chkBoxEFCore_CheckedChanged;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(9F, 23F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(13, 37, 75);
 			ClientSize = new Size(640, 501);
+			Controls.Add(chkBoxEFCore);
 			Controls.Add(btnEditarEf);
 			Controls.Add(btnEditar);
 			Controls.Add(btnDeletar);
@@ -276,6 +288,7 @@
 			MaximizeBox = false;
 			Name = "Form1";
 			Text = "Pessoas";
+			Load += Form1_Load;
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -296,5 +309,6 @@
 		private Button btnDeletarDapper;
 		private Button btnEditarEf;
 		private Button btnEditar;
+		private CheckBox chkBoxEFCore;
 	}
 }
