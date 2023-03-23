@@ -55,7 +55,7 @@
 			lstBoxPessoas.Location = new Point(12, 190);
 			lstBoxPessoas.Name = "lstBoxPessoas";
 			lstBoxPessoas.Size = new Size(616, 263);
-			lstBoxPessoas.TabIndex = 0;
+			lstBoxPessoas.TabIndex = 2;
 			// 
 			// btnListarDapper
 			// 
@@ -68,6 +68,7 @@
 			btnListarDapper.Name = "btnListarDapper";
 			btnListarDapper.Size = new Size(119, 35);
 			btnListarDapper.TabIndex = 1;
+			btnListarDapper.TabStop = false;
 			btnListarDapper.Text = "Listar Dapper";
 			btnListarDapper.UseVisualStyleBackColor = false;
 			btnListarDapper.Click += btnListarDapper_Click;
@@ -83,6 +84,7 @@
 			btnListarEfCore.Name = "btnListarEfCore";
 			btnListarEfCore.Size = new Size(121, 35);
 			btnListarEfCore.TabIndex = 2;
+			btnListarEfCore.TabStop = false;
 			btnListarEfCore.Text = "Listar EF Core";
 			btnListarEfCore.UseVisualStyleBackColor = false;
 			btnListarEfCore.Click += btnListarEfCore_Click;
@@ -95,7 +97,7 @@
 			txtNomePessoa.Location = new Point(12, 102);
 			txtNomePessoa.Name = "txtNomePessoa";
 			txtNomePessoa.Size = new Size(308, 34);
-			txtNomePessoa.TabIndex = 3;
+			txtNomePessoa.TabIndex = 1;
 			// 
 			// txtIdPessoa
 			// 
@@ -105,7 +107,7 @@
 			txtIdPessoa.Location = new Point(12, 35);
 			txtIdPessoa.Name = "txtIdPessoa";
 			txtIdPessoa.Size = new Size(126, 34);
-			txtIdPessoa.TabIndex = 4;
+			txtIdPessoa.TabIndex = 0;
 			txtIdPessoa.KeyPress += txtIdPessoa_KeyPress;
 			// 
 			// btnCadastrar
@@ -119,6 +121,7 @@
 			btnCadastrar.Name = "btnCadastrar";
 			btnCadastrar.Size = new Size(119, 35);
 			btnCadastrar.TabIndex = 5;
+			btnCadastrar.TabStop = false;
 			btnCadastrar.Text = "Cadastrar";
 			btnCadastrar.UseVisualStyleBackColor = false;
 			btnCadastrar.Click += btnCadastrar_Click;
@@ -156,6 +159,7 @@
 			btnPesquisarPessoa.Name = "btnPesquisarPessoa";
 			btnPesquisarPessoa.Size = new Size(119, 35);
 			btnPesquisarPessoa.TabIndex = 8;
+			btnPesquisarPessoa.TabStop = false;
 			btnPesquisarPessoa.Text = "Pesquisar!";
 			btnPesquisarPessoa.UseVisualStyleBackColor = false;
 			btnPesquisarPessoa.Click += btnPesquisarPessoa_Click;
@@ -172,6 +176,7 @@
 			btnPesquisarPessoaEF.Name = "btnPesquisarPessoaEF";
 			btnPesquisarPessoaEF.Size = new Size(119, 35);
 			btnPesquisarPessoaEF.TabIndex = 9;
+			btnPesquisarPessoaEF.TabStop = false;
 			btnPesquisarPessoaEF.Text = "Pesquisar EF";
 			btnPesquisarPessoaEF.UseVisualStyleBackColor = false;
 			btnPesquisarPessoaEF.Visible = false;
@@ -189,6 +194,7 @@
 			btnDeletar.Name = "btnDeletar";
 			btnDeletar.Size = new Size(119, 35);
 			btnDeletar.TabIndex = 11;
+			btnDeletar.TabStop = false;
 			btnDeletar.Text = "Remover EF";
 			btnDeletar.UseVisualStyleBackColor = false;
 			btnDeletar.Click += btnDeletar_Click;
@@ -205,6 +211,7 @@
 			btnDeletarDapper.Name = "btnDeletarDapper";
 			btnDeletarDapper.Size = new Size(119, 35);
 			btnDeletarDapper.TabIndex = 10;
+			btnDeletarDapper.TabStop = false;
 			btnDeletarDapper.Text = "Remover";
 			btnDeletarDapper.UseVisualStyleBackColor = false;
 			btnDeletarDapper.Click += btnDeletarDapper_Click;
@@ -221,6 +228,7 @@
 			btnEditarEf.Name = "btnEditarEf";
 			btnEditarEf.Size = new Size(121, 35);
 			btnEditarEf.TabIndex = 13;
+			btnEditarEf.TabStop = false;
 			btnEditarEf.Text = "Editar EF";
 			btnEditarEf.UseVisualStyleBackColor = false;
 			btnEditarEf.Visible = false;
@@ -237,6 +245,7 @@
 			btnEditar.Name = "btnEditar";
 			btnEditar.Size = new Size(119, 35);
 			btnEditar.TabIndex = 12;
+			btnEditar.TabStop = false;
 			btnEditar.Text = "Editar";
 			btnEditar.UseVisualStyleBackColor = false;
 			btnEditar.Click += btnEditar_Click;
