@@ -146,7 +146,8 @@ public partial class Form1 : Form
 
 		if (!txtIdPessoa.Text.IsNullOrEmpty())
 		{
-			var pessoa = await _pessoaRepository.GetPessoa(Int16.Parse(txtIdPessoa.Text));
+			// var pessoa = await _pessoaRepository.GetPessoa(Int16.Parse(txtIdPessoa.Text));
+			var pessoa = await _pessoaRepository.GetPessoaCompiled(Int16.Parse(txtIdPessoa.Text));
 
 			if (pessoa != null)
 			{

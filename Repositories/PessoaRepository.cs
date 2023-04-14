@@ -135,4 +135,26 @@ public class PessoaRepository : IPessoaRepository
 	{
 		return await _dbContext.SaveChangesAsync() > 0;
 	}
+
+	// Compiled Query
+	private static readonly Func<AppDbContext, int, Task<Pessoa?>> SinglePersonAsync =
+		EF.CompileAsyncQuery((AppDbContext context, int id) =>
+			context.Pessoas.FirstOrDefault(x => x.PessoaId == id));
+	public async Task<PessoaToListViewModel> GetPessoaCompiled(int id)
+	{
+		var pessoa = await SinglePersonAsync(_dbContext, id);
+
+		if (pessoa == null)
+		{
+			return null;
+		}
+
+		var viewModel = new PessoaToListViewModel()
+		{
+			PessoaId = pessoa.PessoaId,
+			Nome = pessoa.Nome
+		};
+
+		return viewModel;
+	}
 }

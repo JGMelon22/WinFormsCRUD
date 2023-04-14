@@ -14,5 +14,6 @@ public interface IPessoaRepository
 	Task<PessoaEditViewModel> EditPessoaDapper(PessoaEditViewModel pessoaEditViewModel);
 	void RemovePessoa(Pessoa pessoa);
 	Task RemovePessoaDapper(int id);
+	Task<PessoaToListViewModel> GetPessoaCompiled(int id);
 	Task<bool> SaveAll();
 }

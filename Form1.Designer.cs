@@ -57,6 +57,7 @@
 			lstBoxPessoas.Name = "lstBoxPessoas";
 			lstBoxPessoas.Size = new Size(616, 263);
 			lstBoxPessoas.TabIndex = 2;
+			lstBoxPessoas.TabStop = false;
 			// 
 			// btnListarDapper
 			// 
@@ -257,6 +258,7 @@
 			chkBoxEFCore.Name = "chkBoxEFCore";
 			chkBoxEFCore.Size = new Size(190, 54);
 			chkBoxEFCore.TabIndex = 14;
+			chkBoxEFCore.TabStop = false;
 			chkBoxEFCore.Text = "Habilitar Operações\r\ncom EF Core ";
 			chkBoxEFCore.UseVisualStyleBackColor = true;
 			chkBoxEFCore.CheckedChanged += chkBoxEFCore_CheckedChanged;
